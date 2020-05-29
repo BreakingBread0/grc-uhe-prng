@@ -72,6 +72,7 @@ namespace PRNG {
             for (int i = 0; i < arr.Length; i++) {
                 for (int j = 0; j < o; j++) {
                     s[j] -= mash.Mash(((int)arr[i]).ToString());
+                    #warning sometimes if needs to be changed to a while if the output becomes non-zero!
                     if (s[j] < 0) {
                         s[j] += 1;
                     }
